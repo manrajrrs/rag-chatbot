@@ -9,12 +9,8 @@ from langchain.chains.combine_documents import create_stuff_documents_chain # To
 from langchain.prompts import ChatPromptTemplate # For creating prompt templates
 from langchain_community.document_loaders import PyPDFLoader # For converting pdf to txt
 
-
-
 # Set your OpenAI API key (this will be charged)
-os.environ["OPENAI_API_KEY"] = "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" # Replace with your actual API key
-
-# API Key: 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
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 # Load your knowledge base from a pdf file
 loader = PyPDFLoader("Screenwriting_for_Dummies.pdf") # Knowledge file
